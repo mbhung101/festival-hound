@@ -9,13 +9,14 @@ export default class Landing extends Component {
     }
   }
 
+
   render (){
     return (
       <div>
         <h2>Where to?</h2>
         <div className="ui center aligned middle aligned grid">
           <div className = "column" style={{width:"750px"}}>
-            <Form onSubmit={this.onNumberSubmit}>
+            <Form onSubmit={this.props.eventSearcher}>
               <Form.Field>
                 <input type="text"/>
               </Form.Field>
