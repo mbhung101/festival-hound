@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Nav from '../components/nav'
 import Landing from '../components/landing'
+import Results from '../components/results'
 
 export default class FHContainer extends Component {
   constructor(){
@@ -25,11 +26,14 @@ export default class FHContainer extends Component {
       <Nav/>
       <Landing eventSearcher={this.eventSearcher}/>
     </div>
-  )}
+  )
   } else {
     return (
-      <Nav/>
-      <Results/>
+      <div>
+        <Nav/>
+        <Results searchTerm={this.state.search}/>
+      </div>
     )
-}
+    }
+  }
 }
