@@ -10,9 +10,11 @@ export default class Results extends Component {
             <h2> Festival Hound </h2>
             <Form onSubmit={this.props.eventSearcher}>
               <div className="field">
-                <input placeholder={this.props.searchTerm} />
+                <div className="ui action input">
+                  <input placeholder= {this.props.searchTerm}/>
+                  <Button color="red" type='submit'>Submit</Button>
+                </div>
               </div>
-              <Button color="red" type='submit'>Submit</Button>
             </Form>
           </div>
         </div>
