@@ -1,39 +1,25 @@
 import React, { Component } from 'react'
 import Nav from '../components/nav'
-import Landing from '../components/landing'
-import Results from '../components/results'
+import Homepage from '../components/homepage'
+import Login from '../components/login'
+// import { Route, BrowserRouter } from 'react-router-dom'
+// render (){
+//   return (
+//     <BrowserRouter>
+//       <div id="main_container" className = "container">
+//         <Nav/>
+//         <Route exact path = '/home' render= {() =><Homepage />}/>
+//         <Route exact path = '/login' render= {() =><Login />}/>
+//       </div>
+//     </BrowserRouter>
+//   )
+// }
+
 
 export default class FHContainer extends Component {
-  constructor(){
-    super()
-    this.state = {
-      search: ""
-    }
-    this.eventSearcher = this.eventSearcher.bind(this)
-  }
-
-  eventSearcher(e){
-    e.preventDefault()
-    this.setState({
-      search: e.target.children[0].children[0].firstElementChild.value
-    })
-  }
-
-  render () {
-    if (this.state.search === ""){
-    return (
-      <div className="ui container">
-        <Nav/>
-        <Landing eventSearcher={this.eventSearcher}/>
-      </div>
+  render (){
+    return(
+      <Homepage/>
     )
-  } else {
-    return (
-      <div className="ui container">
-        <Nav/>
-        <Results searchTerm={this.state.search}/>
-      </div>
-    )
-    }
   }
 }

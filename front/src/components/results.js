@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Button, Form} from 'semantic-ui-react'
+import SignUp from './signup'
 
 export default class Results extends Component {
   render(){
@@ -18,6 +19,7 @@ export default class Results extends Component {
             </Form>
           </div>
         </div>
+        <SignUp/>
       </div>
     )
   }

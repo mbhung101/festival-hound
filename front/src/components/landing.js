@@ -13,7 +13,7 @@ export default class Landing extends Component {
               <div className="field">
                 <div className="ui action input">
                   <input placeholder= "Where to?"/>
-                  <Button color="red" type='submit'>Submit</Button>
+                  <Button size="huge" color="red" type='submit'>Submit</Button>
                 </div>
               </div>
             </Form>
